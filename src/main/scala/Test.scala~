@@ -1,0 +1,29 @@
+
+
+object Test extends App {
+
+implicit def intToCtl(x:Int) : CTL = {return Atom(x)}
+
+//p=0
+//q=1
+//r=2
+
+
+
+val s0=new State(Set(0,1))
+val s1=new State(Set(1,2))
+val s2=new State(Set(2))
+
+val Model = Set(s0,s1,s2)
+
+s0->s2->s2;
+s0->s1->s0;
+s1->s2;
+
+
+val t1 = EX(1 and 2) 
+
+val result = Checker.check (Model,s0,t1);
+
+
+}

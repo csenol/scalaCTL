@@ -1,0 +1,52 @@
+import scala.collection.immutable._
+
+object Checker {
+  
+  type Model = Set[State];
+
+  def check(m:Model , s:State,t:CTL) :Boolean = {
+    return SAT(t,m)(s)
+
+  }
+
+  def SAT(p1:CTL,M:Model) : Model = {
+
+    return null;
+  }
+
+  def SATex(p1:CTL,m:Model) : Model = {
+
+
+    return null;
+  }
+
+  def SATaf(p1:CTL,m:Model) : Model = {
+
+
+    return null;
+  }
+
+  def SATex(p1:CTL,p2:CTL,m:Model) : Model = {
+
+
+    return null;
+  }
+
+  def PREe(m:Model) : Model = {
+
+
+    return null;
+  }
+
+
+  def PREa(m:Model) : Model = {
+
+
+    return null;
+  }
+
+
+
+
+
+}
